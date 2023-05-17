@@ -4,17 +4,16 @@ import PropTypes from 'prop-types';
 
 export class FeedbackOptions extends Component {
   render() {
-    const { options, onLeaveFeedback } = this.props;
-    return options.map(option => (
-      <OptionButton
-        onClick={e => {
-          onLeaveFeedback(option.toLowerCase());
-        }}
-        key={option}
-      >
-        {option}
-      </OptionButton>
-    ));
+    const { good, setGood, neutral, setNeutral, bad, setBad } = this.props;
+    return (
+      <>
+        <OptionButton onClick={() => setGood(good + 1)}>Good</OptionButton>
+        <OptionButton onClick={() => setNeutral(neutral + 1)}>
+          Neutral
+        </OptionButton>
+        <OptionButton onClick={() => setBad(bad + 1)}>Bad</OptionButton>
+      </>
+    );
   }
 }
 
