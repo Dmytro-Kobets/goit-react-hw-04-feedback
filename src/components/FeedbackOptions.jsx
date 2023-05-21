@@ -1,8 +1,14 @@
 import { OptionButton } from './App.styled';
 import PropTypes from 'prop-types';
 
-export const FeedbackOptions = () => {
-  const { good, setGood, neutral, setNeutral, bad, setBad } = this.props;
+export const FeedbackOptions = ({
+  good,
+  setGood,
+  neutral,
+  setNeutral,
+  bad,
+  setBad,
+}) => {
   return (
     <>
       <OptionButton onClick={() => setGood(good + 1)}>Good</OptionButton>

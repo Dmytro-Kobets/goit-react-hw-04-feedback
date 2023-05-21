@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
 
-export const Statistics = () => {
-  const { good, neutral, bad, total, positivePercentage } = this.props;
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
     <div>
       <p>Good: {good}</p>
